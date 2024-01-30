@@ -3,11 +3,10 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      <nav class="navbar bg-success p-2 text-white">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <h1 class="text-white">Task Mate</h1>
-          </a>
+      <nav class="navbar bg-primary text-white mt-3 p-3">
+        <div class="container d-flex justify-content-between">
+            <h2 class="text-white">Task Mate</h2>
+            <button type="button" class="btn btn-light">Light</button>
         </div>
       </nav>
     </div>
