@@ -5,7 +5,7 @@ import ShowTask from './Components/ShowTask'
 
 const App = () => {
   return (
-    <div className='container'>
+    <div>
         <Header/>
         <AddTask/>
         <ShowTask/>
