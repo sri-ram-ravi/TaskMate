@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
-    height: 35rem;
+    height: 20rem;
     overflow-y: auto;
     scroll-behavior: smooth;
 }

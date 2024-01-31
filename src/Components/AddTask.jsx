@@ -16,14 +16,14 @@ const AddTask = ({taskList,setTaskList}) => {
       time:`${data.toLocaleTimeString()} ${data.toLocaleDateString()}`
     }
     setTaskList([...taskList,newTask])
-    setTaskName('')
+    setTaskName("")
   }
 
   return (
     <form onSubmit={handleSubmit}>
     <div className="row mt-3 mb-4">
         <div className="col">
-          <input type="text" className="form-control p-2" placeholder="Add Todo" aria-label="First name" maxLength={15} onChange={handleTaskName}/>
+          <input type="text" className="form-control p-2" placeholder="Add Todo" aria-label="First name" maxLength={15} onChange={handleTaskName} value={taskName}/>
         </div>
         <div className="col">
         <button type="submit" className="btn btn-primary p-2">Add</button>
