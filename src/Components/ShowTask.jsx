@@ -7,7 +7,7 @@ const ShowTask = ({taskList,setTaskList}) => {
     <div className={styles.heading}>
       <h5 className="mt-3">Task List</h5>
       <span className={styles.taskCount}>{taskList.length}</span>
-      <button type="submit" className="btn btn-primary p-2">Clear All</button>
+      <button type="submit" className="btn btn-primary p-2" onClick={()=>setTaskList([])}>Clear All</button>
     </div>
     <div className="mt-3">
       <div className={styles.tasklist}>
