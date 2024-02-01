@@ -1,22 +1,31 @@
-import React, { useState } from 'react'
+import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers'
+import React, { useEffect, useState } from 'react'
 
-const AddTask = ({taskList,setTaskList}) => {
+const AddTask = ({taskList,setTaskList,updateTask,setUpdateTask}) => {
 
   const [taskName,setTaskName]=useState("")
   const handleTaskName=(event)=>setTaskName(event.target.value)
 
+  useEffect(()=>{
+    if(updateTask!==toBeEmpty) setTaskName(updateTask.name)
+  },[updateTask])
+
   const handleSubmit=(e)=>{
     e.preventDefault();
-
     const data=new Date()
 
-    const newTask={
-      id:Math.random()*10000,
-      name:taskName,
-      time:`${data.toLocaleTimeString()} ${data.toLocaleDateString()}`
+    if(updateTask.id){
+      setTaskList(taskList.map(task=>task.id===updateTask.id?{...task,name:taskName,time:`${data.toLocaleTimeString()} ${data.toLocaleDateString()}`}:task))
+      setTaskName("")
+    }else{
+      const newTask={
+        id:Math.random()*10000,
+        name:taskName,
+        time:`${data.toLocaleTimeString()} ${data.toLocaleDateString()}`
+      }
+      if(taskName && taskName.length !== 0) setTaskList([...taskList,newTask])
+      setTaskName("")
     }
-    if(taskName.length !== 0) setTaskList([...taskList,newTask])
-    setTaskName("")
   }
 
   return (
