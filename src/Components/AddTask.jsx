@@ -15,7 +15,7 @@ const AddTask = ({taskList,setTaskList}) => {
       name:taskName,
       time:`${data.toLocaleTimeString()} ${data.toLocaleDateString()}`
     }
-    setTaskList([...taskList,newTask])
+    if(taskName.length !== 0) setTaskList([...taskList,newTask])
     setTaskName("")
   }
 
