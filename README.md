@@ -19,7 +19,7 @@ Here are some screenshots of Task Mate in action:
 
 *Task Mate Dashboard*
 
-![Task Mate Dashboard](screenshots/dashboard.png)
+![Task Mate Dashboard](screenshots/Dashboard.png)
 
 *Adding a Task*
 
