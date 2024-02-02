@@ -32,10 +32,10 @@ const AddTask = ({taskList,setTaskList,updateTask,setUpdateTask}) => {
     <form onSubmit={handleSubmit}>
     <div className="row mt-3 mb-4">
         <div className="col">
-          <input type="text" className="form-control p-2" placeholder="Add Todo" aria-label="First name" maxLength={15} onChange={handleTaskName} value={taskName}/>
+          <input type="text" className="form-control p-2" placeholder="Add Todo" aria-label="First name" maxLength={15} onChange={handleTaskName} value={taskName || ""}/>
         </div>
         <div className="col">
-        <button type="submit" className="btn btn-primary p-2">Add</button>
+        <button type="submit" className="btn btn-primary p-2">{(updateTask.id)?"Update":"Add"}</button>
         </div>
     </div>
     </form>
