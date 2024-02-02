@@ -30,6 +30,7 @@ Here are some screenshots of Task Mate in action:
 *Delete a Task*
 
 ![Count of Task](screenshots/count%20of%20task.png)
+
 *Count of Task*
 
 ![clear all Task](screenshots/clear%20all.png)
