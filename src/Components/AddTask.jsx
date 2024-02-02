@@ -17,6 +17,7 @@ const AddTask = ({taskList,setTaskList,updateTask,setUpdateTask}) => {
     if(updateTask.id){
       setTaskList(taskList.map(task=>task.id===updateTask.id?{...task,name:taskName,time:`${data.toLocaleTimeString()} ${data.toLocaleDateString()}`}:task))
       setTaskName("")
+      window.location.reload()
     }else{
       const newTask={
         id:Math.random()*10000,
@@ -25,19 +26,16 @@ const AddTask = ({taskList,setTaskList,updateTask,setUpdateTask}) => {
       }
       if(taskName && taskName.length !== 0) setTaskList([...taskList,newTask])
       setTaskName("")
+      window.location.reload()
     }
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-    <div className="row mt-3 mb-4">
-        <div className="col">
-          <input type="text" className="form-control p-2" placeholder="Add Todo" aria-label="First name" maxLength={15} onChange={handleTaskName} value={taskName || ""}/>
-        </div>
-        <div className="col">
-        <button type="submit" className="btn btn-primary p-2">{(updateTask.id)?"Update":"Add"}</button>
-        </div>
-    </div>
+    <form onSubmit={handleSubmit} className='d-flex justify-content-center'>
+      <div className='d-flex justify-content-between m-5 gap-5'>
+        <input type="text" className="form-control" placeholder="Add Todo" aria-label="First name" maxLength={15} onChange={handleTaskName} value={taskName || ""}/>
+        <button type="submit" className="btn btn-primary">{(!updateTask.id)?"Add":"Update"}</button>
+      </div>
     </form>
   )
 }
