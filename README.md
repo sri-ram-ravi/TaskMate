@@ -18,22 +18,28 @@ Task Mate is a React-based task management application designed to help users or
 Here are some screenshots of Task Mate in action:
 
 *Task Mate Dashboard*
+
 ![Task Mate Dashboard](screenshots/dashboard.png)
 
 *Adding a Task*
+
 ![Adding a Task](screenshots/Adding%20task.png)
 
 *Edit a Task*
+
 ![Edit a Task](screenshots/update%20task.png)
 
 *Delete a Task*
+
 ![Delete a Task](screenshots/delete%20task.png)
 
 
 *Count of Task*
+
 ![Count of Task](screenshots/count%20of%20task.png)
 
 *Clear all Task*
+
 ![clear all Task](screenshots/clear%20all.png)
 
 
